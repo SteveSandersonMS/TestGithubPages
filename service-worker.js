@@ -50,7 +50,6 @@ async function onFetch(event) {
 self.addEventListener('message', async event => {
     if (event.data === 'skipWaiting') {
         await self.skipWaiting();
-        const clients = await self.clients.matchAll();
-        clients.forEach(c => c.navigate(c.url));
+        event.source.navigate(event.source.url);
     }
 }); 
