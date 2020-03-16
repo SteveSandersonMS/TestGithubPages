@@ -53,3 +53,4 @@ self.addEventListener('message', async event => {
         event.source.postMessage('reload');
     }
 }); 
+//
