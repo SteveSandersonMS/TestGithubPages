@@ -1,4 +1,4 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
+﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -180,4 +180,33 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+}
+
+body:not(.pwa-ready) .pwa-ready-notice {
+    display: none;
+}
+
+.pwa-ready-notice {
+    position: fixed;
+    background: #4f4f4f;
+    padding: 1rem 1.5rem;
+    bottom: 2rem;
+    margin: auto;
+    width: 25rem;
+    left: 50%;
+    margin-left: -12.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 3px 5px rgba(0,0,0,0.4);
+    text-align: center;
+    color: white;
+    animation: slide-up-fade-in ease-out 0.6s;
+}
+
+    .pwa-ready-notice h1 {
+        font-size: 1.2rem;
+    } 
+
+@keyframes slide-up-fade-in {
+    0% { opacity: 0; transform: translate(0px, 30px); }
+    100% { opacity: 1; transform: translate(0px, 0px); }
 }
