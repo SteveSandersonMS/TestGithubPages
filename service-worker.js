@@ -53,3 +53,5 @@ self.addEventListener('message', async event => {
         event.source.navigate(event.source.url);
     }
 }); 
+
+//
