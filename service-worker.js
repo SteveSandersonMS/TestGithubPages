@@ -48,9 +48,17 @@ async function onFetch(event) {
 }
 
 self.addEventListener('message', async event => {
-    if (event.data === 'skipWaiting') {
-        await self.skipWaiting();
-        event.source.postMessage('reload');
+    const clients = await self.clients.matchAll();
+    clients.forEach(c => c.postMessage('SW: Received message ' + event.data));
+    try {
+        if (event.data === 'skipWaiting') {
+            clients.forEach(c => c.postMessage('SW: Will skip waiting'));
+            await self.skipWaiting();
+            clients.forEach(c => c.postMessage('SW: Will ask to reload'));
+            event.source.postMessage('reload');
+        }
+    } catch (ex) {
+        clients.forEach(c => c.postMessage('SW: Exception'));
+        clients.forEach(c => c.postMessage('SW: ' + ex.toString()));
     }
 }); 
-//
