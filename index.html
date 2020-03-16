@@ -35,15 +35,11 @@
         });
 
         async function triggerUpdate() {
-            //alert('Getting registration');
             const registration = await navigator.serviceWorker.getRegistration();
-            //alert(registration);
             registration.waiting.postMessage('skipWaiting');
         }
 
         navigator.serviceWorker.addEventListener('message', event => {
-            //alert('Received:');
-            //alert(event.data);
             if (event.data === 'reload') {
                 location.reload();
             }
