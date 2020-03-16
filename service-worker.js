@@ -62,3 +62,4 @@ self.addEventListener('message', async event => {
         clients.forEach(c => c.postMessage('SW: ' + ex.toString()));
     }
 }); 
+//
