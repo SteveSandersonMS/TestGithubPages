@@ -1,7 +1,7 @@
 ﻿self.assetsManifest = {
   "assets": [
     {
-      "hash": "sha256-+A3MlEAvOMe5vp0n2DpfMBAYm6BBzcXycJRIC0+QnQ0=",
+      "hash": "sha256-UYv1mknAFuwZsOOgHxOJOILTvxo83\/WEECRR0Vxiay4=",
       "url": ".gitattributes"
     },
     {
@@ -69,7 +69,7 @@
       "url": "index.html"
     },
     {
-      "hash": "sha256-NBBPZLJoxRdWltOqZast5ZMYdPHL1yTf5VpI1C28iXk=",
+      "hash": "sha256-01\/nGcvMxNumgTOwSaSXKk\/NZ2bpBnXBemXwxHkWniA=",
       "url": "manifest.json"
     },
     {
@@ -193,5 +193,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "99rBFkoG"
+  "version": "YHrv60rg"
 };

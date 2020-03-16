@@ -1,7 +1,7 @@
 {
   "name": "MyPWA",
   "short_name": "MyPWA",
-  "start_url": "/",
+  "start_url": "/TestGithubPages/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#03173d",
