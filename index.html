@@ -22,7 +22,7 @@
     <script src="_framework/blazor.webassembly.js"></script>
 
     <script>
-        navigator.serviceWorker.register('service-worker.published.js').then(async registration => {
+        navigator.serviceWorker.register('service-worker.js').then(async registration => {
             checkIfReady();
             registration.onupdatefound = () => { registration.installing.onstatechange = checkIfReady; };
 
