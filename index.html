@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>MyPWA</title>
+    <base href="/TestGithubPages/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/site.css" rel="stylesheet" />
+    <link href="manifest.json" rel="manifest" />
+</head>
+
+<body>
+    <app>Loading...</app>
+
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+    <script src="_framework/blazor.webassembly.js"></script>
+
+    <script>
+        navigator.serviceWorker.register('service-worker.js').then(async registration => {
+            checkIfReady();
+            registration.onupdatefound = () => { registration.installing.onstatechange = checkIfReady; };
+
+            function checkIfReady() {
+                if (registration.active && registration.waiting && registration.waiting.state === 'installed') {
+                    document.body.classList.add('pwa-ready');
+                }
+            }
+        });
+
+        async function triggerUpdate() {
+            const registration = await navigator.serviceWorker.getRegistration();
+            registration.waiting.postMessage('skipWaiting');
+        }
+    </script>
+</body>
+
+</html>
