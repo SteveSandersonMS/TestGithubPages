@@ -81,7 +81,7 @@
       "url": "sample-data\/weather.json"
     },
     {
-      "hash": "sha256-TxVlZEYOgjicQPD\/B8exQc7+rSdse\/K8IW4KWPLN3\/0=",
+      "hash": "sha256-Y1M8rTGHISfQsX7i6Spnh\/9rBUmnrmJQNjCRAo9TiJU=",
       "url": "service-worker.js"
     },
     {
@@ -197,5 +197,5 @@
       "url": "_framework\/blazor.boot.json"
     }
   ],
-  "version": "\/7\/z9g0b"
+  "version": "UImDWWhZ"
 };

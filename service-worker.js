@@ -50,6 +50,6 @@ async function onFetch(event) {
 self.addEventListener('message', async event => {
     if (event.data === 'skipWaiting') {
         await self.skipWaiting();
-        event.source.navigate(event.source.url);
+        event.source.postMessage('reload');
     }
 }); 
